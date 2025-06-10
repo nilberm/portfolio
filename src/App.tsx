@@ -1,10 +1,11 @@
-import AboutSection from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
-import ExperienceSection from "./components/ExperienceSection";
-import Footer from "./components/Footer";
-import { Header } from "./components/Header";
-import { HeroSection } from "./components/HeroSection";
-import ProjectsSection from "./components/ProjectsSection";
+import AboutSection from "./components/About/AboutSection";
+import ContactSection from "./components/Contact/ContactSection";
+import ExperienceSection from "./components/Experience/ExperienceSection";
+
+import { HeroSection } from "./components/Hero/HeroSection";
+import Footer from "./components/layout/Footer";
+import { Header } from "./components/layout/Header";
+import ProjectsSection from "./components/Projects/ProjectsSection";
 import useScrollAnimation from "./hooks/useScrollAnimation";
 import { useTheme } from "./hooks/useTheme";
 

@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
-import {
-  BrazilFlagIcon,
-  MenuIcon,
-  MoonIcon,
-  SunIcon,
-  USFlagIcon,
-  XIcon,
-} from "./icons/icons";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../../context/LanguageContext";
+import { BrazilFlagIcon, MenuIcon, MoonIcon, SunIcon, USFlagIcon, XIcon } from "../icons";
+
 
 const navLinks = [
   { href: "#hero", label: { en: "Home", pt: "Início" } },
@@ -73,6 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
           >
             Nilber Mota
           </a>
+
           <nav className="hidden md:flex space-x-6 lg:space-x-8 items-center">
             {navLinks.map((link) => (
               <a
@@ -85,8 +80,9 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               </a>
             ))}
           </nav>
+
           <div className="flex items-center">
-            <div className="flex items-center space-x-2 mr-2">
+            <div className="hidden md:flex items-center space-x-2 mr-2">
               <button
                 onClick={() => setLanguage("en")}
                 className={`py-1 px-2 rounded-md text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors ${
@@ -108,8 +104,8 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
               </button>
             </div>
 
-            <span></span>
-            <span className="mx-2 h-6 w-[2px] bg-slate-300 dark:bg-slate-600"></span>
+            <span className="hidden md:block mx-2 h-6 w-[2px] bg-slate-300 dark:bg-slate-600"></span>
+
             <button
               onClick={toggleTheme}
               className="p-2 rounded-md text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
@@ -139,17 +135,38 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden bg-white dark:bg-slate-800 shadow-lg">
+        <nav className="md:hidden bg-white dark:bg-slate-800 shadow-lg px-4 pb-4 pt-2 space-y-2">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={handleLinkClick}
-              className="block py-3 px-4 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+              className="block py-3 px-4 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors rounded-md"
             >
               {link.label[language]}
             </a>
           ))}
+
+          <div className="flex space-x-2 mt-2 pt-2 border-t border-slate-200 dark:border-slate-700">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`flex-1 flex justify-center items-center py-2 px-3 rounded-md text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors ${
+                language === "en" ? "opacity-100" : "opacity-50"
+              }`}
+              aria-label="Switch to English"
+            >
+              <USFlagIcon className="h-5 w-5" />
+            </button>
+            <button
+              onClick={() => setLanguage("pt")}
+              className={`flex-1 flex justify-center items-center py-2 px-3 rounded-md text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors ${
+                language === "pt" ? "opacity-100" : "opacity-50"
+              }`}
+              aria-label="Switch to Portuguese"
+            >
+              <BrazilFlagIcon className="h-5 w-5" />
+            </button>
+          </div>
         </nav>
       )}
     </header>

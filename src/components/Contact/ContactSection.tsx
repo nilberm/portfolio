@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SparklesIcon } from "./icons/icons";
+import { SparklesIcon } from "../icons";
 
 type FormData = {
   name: string;
