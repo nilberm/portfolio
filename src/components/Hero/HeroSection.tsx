@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import Typewriter from "typewriter-effect";
+import person1Png from "../../assets/person-1.png";
 import personPng from "../../assets/person.png";
 import { useLanguage } from "../../context/LanguageContext";
 import Particles from "../common/Particles";
@@ -16,7 +17,7 @@ export const HeroSection: React.FC = () => {
     },
     subtitle: {
       en: "Software Developer",
-      pt: "Desenvolvedor de Software",
+      pt: "Fullstack Developer",
     },
     viewProjects: {
       en: "View Projects",
@@ -65,7 +66,7 @@ export const HeroSection: React.FC = () => {
               Nilber Mota
             </span>
           </h1>
-          <p className="mt-4 text-xl sm:text-2xl text-slate-700 dark:text-slate-300 font-medium h-16">
+          <p className="mt-4 text-xl sm:text-2xl text-slate-700 dark:text-slate-300 font-medium">
             <Typewriter
               key={language}
               onInit={(typewriter) => {
@@ -115,7 +116,8 @@ export const HeroSection: React.FC = () => {
         </div>
         <div className="hidden md:flex justify-center items-center animated-element animate-slide-in-right">
           <ProfileCard
-            avatarUrl={personPng}
+            avatarUrl={person1Png}
+            miniAvatarUrl={personPng}
             name="Nilber Mota"
             title={texts.subtitle[language]}
             handle="nilberm"
