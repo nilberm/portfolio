@@ -22,7 +22,7 @@ type Project = {
   liveUrl: string;
 };
 
-const projects = [
+const projects: Project[] = [
   {
     title: {
       en: "Lego Media Hub",
@@ -71,8 +71,8 @@ const projects = [
       pt: "Devmota Kanban",
     },
     description: {
-      en: "A drag-and-drop Kanban board built with React.js. Designed from scratch in Figma to enhance UI/UX and frontend development skills. Features intuitive card movement between columns for task organization.",
-      pt: "Quadro Kanban com drag-and-drop feito com React. Design feito do zero no Figma, com movimentação intuitiva de cartões entre colunas.",
+      en: "A drag-and-drop Kanban board built with React.js. Designed from scratch in Figma to enhance UI/UX and frontend development skills.",
+      pt: "Quadro Kanban com drag-and-drop feito com React. Design feito do zero no Figma, com movimentação intuitiva entre colunas.",
     },
     imageUrl: kanbanProject,
     tags: ["React", "Figma", "Drag and Drop", "Kanban", "UI/UX"],
@@ -85,8 +85,8 @@ const projects = [
       pt: "Registro de Visitantes de Museu",
     },
     description: {
-      en: "A web application for registering museum visitors, built with React, TypeScript, and Vite. It features a user-friendly interface for managing visitor entries and integrates with a backend API for data persistence.",
-      pt: "Aplicação para registro de visitantes de museu, feita com React, TypeScript e Vite. Possui interface amigável e integração com API para persistência dos dados.",
+      en: "Web application for managing museum visitors with backend integration.",
+      pt: "Aplicação para gerenciamento de visitantes de museu com integração backend.",
     },
     imageUrl: museumVisitorProject,
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
@@ -99,8 +99,8 @@ const projects = [
       pt: "Gerenciador de Episódios Rick and Morty",
     },
     description: {
-      en: "A complete challenge app built for AZShip that allows browsing, filtering, and managing Rick and Morty episodes with favorites, seen status, pagination, and dark mode.",
-      pt: "Aplicação completa construída para a AZShip para navegar, filtrar e gerenciar episódios de Rick and Morty com favoritos, vistos, paginação e modo escuro.",
+      en: "App for filtering, browsing and favoriting Rick and Morty episodes with dark mode and pagination.",
+      pt: "App para filtrar, navegar e favoritar episódios de Rick and Morty com modo escuro e paginação.",
     },
     imageUrl: rickAndMortyProject,
     tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "GraphQL", "Zustand"],
@@ -115,7 +115,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 overflow-hidden">
       <img
         src={project.imageUrl}
-        alt={`${project.title[language]} preview`}
+        alt={`Preview of ${project.title[language]}`}
         className="w-full h-48 object-cover"
       />
       <div className="p-6">
@@ -162,10 +162,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const ProjectsSection: React.FC = () => {
   const { language } = useLanguage();
+
   return (
-    <section className="py-16 md:py-24">
+    <section id="projects" className="py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-sora font-bold mb-8 md:mb-12 text-center text-slate-900 dark:text-slate-50 ">
+        <h2 className="text-3xl md:text-4xl font-sora font-bold mb-8 md:mb-12 text-center text-slate-900 dark:text-slate-50">
           {language === "en" ? "Personal Projects" : "Projetos Pessoais"}
         </h2>
         <p className="text-lg md:text-xl text-center text-slate-600 dark:text-slate-400 mb-10 md:mb-16 max-w-2xl mx-auto">
@@ -174,8 +175,8 @@ const ProjectsSection: React.FC = () => {
             : "Uma seleção de projetos pessoais onde explorei tecnologias, desenvolvi habilidades e construí soluções reais."}
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {projects.map((p) => (
-            <ProjectCard key={p.title.en} project={p} />
+          {projects.map((project) => (
+            <ProjectCard key={project.title.en} project={project} />
           ))}
         </div>
       </div>
