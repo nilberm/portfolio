@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section
-      id="hero"
+      id="hero main-content"
       className="relative h-screen flex items-center pt-16 md:pt-20 bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 dark:from-slate-800 dark:via-slate-900 dark:to-blue-900/30 overflow-hidden"
     >
       <div className="absolute inset-0">{particlesElement}</div>
@@ -86,7 +86,7 @@ export const HeroSection: React.FC = () => {
               {texts.viewProjects[language]}
             </a>
             <a
-              href="/resume.pdf"
+              href="/resume/nilber-mota-resume.pdf"
               download="NilberMota_Resume.pdf"
               className="inline-block bg-transparent hover:bg-slate-200 dark:hover:bg-slate-700 text-blue-600 dark:text-blue-500 border-2 border-blue-600 dark:border-blue-500 font-semibold py-3 px-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 text-center"
             >

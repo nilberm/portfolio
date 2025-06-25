@@ -1,10 +1,11 @@
 import AboutSection from "./components/About/AboutSection";
-import ContactSection from "./components/Contact/ContactSection";
+// import ContactSection from "./components/Contact/ContactSection";
 import ExperienceSection from "./components/Experience/ExperienceSection";
 
 import { HeroSection } from "./components/Hero/HeroSection";
 import Footer from "./components/layout/Footer";
 import { Header } from "./components/layout/Header";
+import ProfessionalProjectsSection from "./components/Projects/ProfessionalProjectsSection";
 import ProjectsSection from "./components/Projects/ProjectsSection";
 import useScrollAnimation from "./hooks/useScrollAnimation";
 import { useTheme } from "./hooks/useTheme";
@@ -27,8 +28,12 @@ export default function App() {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
+        <div id="projects">
+          <ProfessionalProjectsSection />
+          <ProjectsSection />
+        </div>
+
+        {/* <ContactSection /> */}
       </main>
       <Footer />
     </div>
