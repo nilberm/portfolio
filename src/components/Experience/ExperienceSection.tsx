@@ -37,15 +37,15 @@ const experiences: Experience[] = [
         "Built scalable sites for Tresemmé, Rexona, Degree, MINI Cooper, and HOKA.",
         "Created campaign dashboards integrated with Meta APIs.",
         "Delivered dynamic components with high Lighthouse scores.",
-        "Solved complex build and deploy issues across projects."
+        "Solved complex build and deploy issues across projects.",
       ],
       pt: [
         "Criei sites escaláveis para Tresemmé, Rexona, Degree, MINI Cooper e HOKA.",
         "Desenvolvi dashboards de campanha com integração à API da Meta.",
         "Entreguei componentes dinâmicos com alta performance no Lighthouse.",
-        "Resolvi problemas complexos de build e deploy em diferentes projetos."
-      ]
-    }
+        "Resolvi problemas complexos de build e deploy em diferentes projetos.",
+      ],
+    },
   },
   {
     title: "Frontend Developer",
@@ -63,14 +63,14 @@ const experiences: Experience[] = [
       en: [
         "Built file upload and document positioning features.",
         "Implemented collaborative task flow and approval system.",
-        "Led component reuse and layout consistency improvements."
+        "Led component reuse and layout consistency improvements.",
       ],
       pt: [
         "Implementei recursos de upload de arquivos e posicionamento de assinatura.",
         "Desenvolvi fluxo de tarefas colaborativas e sistema de aprovação.",
-        "Liderei melhorias na reutilização de componentes e consistência visual."
-      ]
-    }
+        "Liderei melhorias na reutilização de componentes e consistência visual.",
+      ],
+    },
   },
   {
     title: "Frontend Developer",
@@ -88,14 +88,14 @@ const experiences: Experience[] = [
       en: [
         "Created over 20 dynamic pages with authentication and role-based access.",
         "Integrated blockchain digital signing and calendar tools.",
-        "Worked closely with backend team to map API flows."
+        "Worked closely with backend team to map API flows.",
       ],
       pt: [
         "Criei mais de 20 páginas dinâmicas com autenticação e permissões.",
         "Integrei assinatura digital via blockchain e ferramentas de calendário.",
-        "Trabalhei com o time backend no mapeamento de fluxos da API."
-      ]
-    }
+        "Trabalhei com o time backend no mapeamento de fluxos da API.",
+      ],
+    },
   },
   {
     title: "Frontend Developer Intern",
@@ -113,15 +113,15 @@ const experiences: Experience[] = [
       en: [
         "Developed geolocation and dynamic ticket creation features.",
         "Created dashboards for organizers with analytics.",
-        "Handled responsive layout and mobile-first adjustments."
+        "Handled responsive layout and mobile-first adjustments.",
       ],
       pt: [
         "Implementei geolocalização e criação dinâmica de ingressos.",
         "Desenvolvi dashboards com métricas para organizadores.",
-        "Ajustei layouts responsivos com abordagem mobile-first."
-      ]
-    }
-  }
+        "Ajustei layouts responsivos com abordagem mobile-first.",
+      ],
+    },
+  },
 ];
 
 const ExperienceSection: React.FC = () => {
@@ -130,9 +130,7 @@ const ExperienceSection: React.FC = () => {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setSelected(null);
-      }
+      if (event.key === "Escape") setSelected(null);
     };
 
     if (selected) {

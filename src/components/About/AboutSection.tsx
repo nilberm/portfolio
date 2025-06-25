@@ -10,7 +10,7 @@ export const AboutSection: React.FC = () => {
       pt: "Sobre Mim",
     },
     intro: {
-      en: "I'm Nilber, a software developer who found in programming a perfect match for my passion for logic, technology, and creation.",
+      en: "I’m Nilber, a software developer who found in programming a perfect match for my passion for logic, technology, and creation.",
       pt: "Sou Nilber, um desenvolvedor de software que encontrou na programação a combinação perfeita entre lógica, tecnologia e criatividade.",
     },
     journeyTitle: {
@@ -18,7 +18,7 @@ export const AboutSection: React.FC = () => {
       pt: "Minha Trajetória Profissional",
     },
     journeyText: {
-      en: `My interest in programming started when I discovered the CS50 course by Harvard. It quickly became clear that I had found what I wanted to do for the rest of my life. Since then, I've built a solid foundation in both frontend and backend development, always aiming to deliver high-quality and scalable solutions. I've developed complex interfaces, integrated systems, and led improvements in code review and QA processes. My goal is to grow as a complete developer, capable of working across the entire stack, including DevOps, while staying focused on delivering value and impact through technology.`,
+      en: `My interest in programming started when I discovered the CS50 course by Harvard. It quickly became clear that I had found what I wanted to do for the rest of my life. Since then, I’ve built a solid foundation in both frontend and backend development, always aiming to deliver high-quality and scalable solutions. I’ve developed complex interfaces, integrated systems, and led improvements in code review and QA processes. My goal is to grow as a complete developer, capable of working across the entire stack, including DevOps, while staying focused on delivering value and impact through technology.`,
       pt: `Meu interesse por programação começou quando descobri o curso CS50 de Harvard. Rapidamente percebi que tinha encontrado o que queria fazer para o resto da minha vida. Desde então, construí uma base sólida tanto no frontend quanto no backend, sempre buscando entregar soluções de alta qualidade e escaláveis. Desenvolvi interfaces complexas, sistemas integrados e liderei melhorias nos processos de revisão de código e QA. Meu objetivo é crescer como um desenvolvedor completo, capaz de atuar em toda a stack, incluindo DevOps, enquanto mantenho o foco em gerar valor e impacto por meio da tecnologia.`,
     },
     educationTitle: {
@@ -29,7 +29,7 @@ export const AboutSection: React.FC = () => {
       {
         enSchool: "Brigham Young University - Idaho",
         ptSchool: "Brigham Young University - Idaho",
-        enDegree: "Bachelor's Degree in Software Development",
+        enDegree: "Bachelor’s Degree in Software Development",
         ptDegree: "Bacharelado em Desenvolvimento de Software",
       },
       {
