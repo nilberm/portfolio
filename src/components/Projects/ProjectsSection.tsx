@@ -99,7 +99,7 @@ const projects: Project[] = [
       pt: "Gerenciador de Episódios Rick and Morty",
     },
     description: {
-      en: "App for filtering, browsing and favoriting Rick and Morty episodes with dark mode and pagination.",
+      en: "App for filtering, Browse and favoriting Rick and Morty episodes with dark mode and pagination.",
       pt: "App para filtrar, navegar e favoritar episódios de Rick and Morty com modo escuro e paginação.",
     },
     imageUrl: rickAndMortyProject,
