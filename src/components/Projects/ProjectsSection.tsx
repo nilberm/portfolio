@@ -109,57 +109,6 @@ const projects: Project[] = [
   },
 ];
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-  const { language } = useLanguage();
-  return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 overflow-hidden">
-      <img
-        src={project.imageUrl}
-        alt={`Preview of ${project.title[language]}`}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-6">
-        <h3 className="text-xl font-sora font-semibold text-slate-900 dark:text-slate-50 mb-2">
-          {project.title[language]}
-        </h3>
-        <p className="text-slate-600 dark:text-slate-400 mb-4">
-          {project.description[language]}
-        </p>
-        <div className="flex flex-wrap mb-4">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="inline-block bg-blue-600/20 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400 text-xs font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-        <div className="flex space-x-4">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-500 font-medium hover:underline"
-            aria-label={`View ${project.title[language]} live`}
-          >
-            Live
-          </a>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-500 font-medium hover:underline"
-            aria-label={`View ${project.title[language]} source on GitHub`}
-          >
-            GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const ProjectsSection: React.FC = () => {
   const { language } = useLanguage();
 
@@ -176,7 +125,54 @@ const ProjectsSection: React.FC = () => {
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {projects.map((project) => (
-            <ProjectCard key={project.title.en} project={project} />
+            <div
+              key={project.title.en}
+              className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 overflow-hidden"
+            >
+              <img
+                src={project.imageUrl}
+                alt={`Preview of ${project.title[language]}`}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-sora font-semibold text-slate-900 dark:text-slate-50 mb-2">
+                  {project.title[language]}
+                </h3>
+                <p className="text-slate-600 dark:text-slate-400 mb-4">
+                  {project.description[language]}
+                </p>
+                <div className="flex flex-wrap mb-4">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-block bg-blue-600/20 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400 text-xs font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex space-x-4">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-500 font-medium hover:underline"
+                    aria-label={`View ${project.title[language]} live`}
+                  >
+                    Live
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-500 font-medium hover:underline"
+                    aria-label={`View ${project.title[language]} source on GitHub`}
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
