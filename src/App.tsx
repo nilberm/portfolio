@@ -1,5 +1,5 @@
 import AboutSection from "./components/About/AboutSection";
-// import ContactSection from "./components/Contact/ContactSection";
+import ContactSection from "./components/Contact/ContactSection";
 import ExperienceSection from "./components/Experience/ExperienceSection";
 
 import { HeroSection } from "./components/Hero/HeroSection";
@@ -33,7 +33,7 @@ export default function App() {
           <ProjectsSection />
         </div>
 
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
       <Footer />
     </div>

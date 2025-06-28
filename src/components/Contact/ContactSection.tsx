@@ -25,11 +25,10 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     setStatus(
       language === "en"
-        ? "Message sent successfully! (Simulated)"
-        : "Mensagem enviada com sucesso! (Simulação)"
+        ? "Message sent successfully!"
+        : "Mensagem enviada com sucesso!"
     );
     setFormData({ name: "", email: "", message: "" });
   };
@@ -49,7 +48,16 @@ const ContactSection: React.FC = () => {
             : "Tem um projeto em mente, uma dúvida ou só quer bater um papo? Vamos construir algo incrível juntos!"}
         </p>
         <div className="max-w-xl mx-auto bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700">
-          <form onSubmit={handleSubmit}>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
+
             <div className="mb-5">
               <label
                 htmlFor="name"
@@ -60,6 +68,7 @@ const ContactSection: React.FC = () => {
               <input
                 type="text"
                 id="name"
+                name="name"
                 value={formData.name}
                 onChange={handleInputChange}
                 autoComplete="name"
@@ -78,6 +87,7 @@ const ContactSection: React.FC = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 autoComplete="email"
@@ -95,6 +105,7 @@ const ContactSection: React.FC = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}

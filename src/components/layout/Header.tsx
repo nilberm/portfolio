@@ -14,7 +14,7 @@ const navLinks = [
   { href: "#about", label: { en: "About", pt: "Sobre" } },
   { href: "#experience", label: { en: "Experience", pt: "Experiência" } },
   { href: "#projects", label: { en: "Projects", pt: "Projetos" } },
-  // { href: "#contact", label: { en: "Contact", pt: "Contato" } },
+  { href: "#contact", label: { en: "Contact", pt: "Contato" } },
 ];
 
 interface HeaderProps {
