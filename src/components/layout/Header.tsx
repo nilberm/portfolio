@@ -7,7 +7,7 @@ import {
   SunIcon,
   USFlagIcon,
   XIcon,
-} from "../icons";
+} from "../Icons";
 
 const navLinks = [
   { href: "#hero", label: { en: "Home", pt: "Início" } },

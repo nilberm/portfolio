@@ -4,7 +4,7 @@ import person1Png from "../../assets/person-1.png";
 import personPng from "../../assets/person.png";
 import { useLanguage } from "../../context/LanguageContext";
 import Particles from "../common/Particles";
-import { GithubIcon, LinkedinIcon } from "../icons";
+import { GithubIcon, LinkedinIcon } from "../Icons";
 import ProfileCard from "./ProfileCard";
 
 export const HeroSection: React.FC = () => {
